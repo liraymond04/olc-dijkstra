@@ -20,6 +20,7 @@ void Game::HandleInput(float fElapsedTime) {
 			for (auto &cur : vecNodes) {
 				Node &node = cur.second;
 				if (IsPointInCircle(node.px, node.py, node.radius, vMouse.x, vMouse.y)) {
+					if (node.id == pSelectedNode->id) break;
 					AddEdge(pSelectedNode, &node, fEdgeRadius);
 					pSelectedNode = &node;
 					bSelectedEdgeStart = false;
