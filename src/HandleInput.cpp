@@ -125,6 +125,34 @@ void Game::HandleInput(float fElapsedTime) {
 		}
 	}
 
+	if (GetKey(olc::Key::EQUALS).bPressed) {
+		for (auto &cur : vecEdges) {
+			Edge &edge = cur.second;
+			float sx = vecNodes[edge.si].px, sy = vecNodes[edge.si].py;
+			float ex = vecNodes[edge.ei].px, ey = vecNodes[edge.ei].py;
+			float midx = (sx + ex) / 2, midy = (sy + ey) / 2;
+			if (IsPointInCircle(midx, midy, edge.radius, vMouse.x, vMouse.y)) {
+				vecEdges[edge.id].w++;
+				bIsGraphUpdated = true;
+				break;
+			}
+		}
+	}
+
+	if (GetKey(olc::Key::MINUS).bPressed) {
+		for (auto &cur : vecEdges) {
+			Edge &edge = cur.second;
+			float sx = vecNodes[edge.si].px, sy = vecNodes[edge.si].py;
+			float ex = vecNodes[edge.ei].px, ey = vecNodes[edge.ei].py;
+			float midx = (sx + ex) / 2, midy = (sy + ey) / 2;
+			if (IsPointInCircle(midx, midy, edge.radius, vMouse.x, vMouse.y)) {
+				vecEdges[edge.id].w--;
+				bIsGraphUpdated = true;
+				break;
+			}
+		}
+	}
+
 	if (GetKey(olc::Key::ENTER).bPressed) {
 		bSimulationPlay = true && !vecShortestPath.empty();
 	}

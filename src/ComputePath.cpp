@@ -35,7 +35,7 @@ void Game::ComputePath() {
         visited[u] = true;
 
         for (const dEdge &edge : adj[u]) {
-            int dist = cur.dist + edge.w;
+            int dist = cur.dist + vecEdges[edge.id].w;
             if (dist < result[edge.v] && !visited[edge.v]) {
                 pq.push({edge.v, dist});
                 result[edge.v] = dist;
