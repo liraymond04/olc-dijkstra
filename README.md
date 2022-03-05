@@ -1,6 +1,6 @@
 # olc-dijkstra
 
-GUI implementation of Dijkstra's shortest path algoritm in the olcPixelGameEngine.
+GUI implementation of Dijkstra's shortest path algorithm in the olcPixelGameEngine.
 
 ## Controls
 
