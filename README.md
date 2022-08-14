@@ -2,6 +2,8 @@
 
 GUI implementation of Dijkstra's shortest path algorithm in the olcPixelGameEngine.
 
+![dijkstra](https://user-images.githubusercontent.com/39678448/184523029-138e6915-8f88-4b95-a595-20350363bdbf.gif)
+
 ## Controls
 
 | Button | Action |
