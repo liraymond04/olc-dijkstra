@@ -30,6 +30,9 @@ set(C_CXX_SOURCES_DIR "src")
 #
 set(C_CXX_HEADERS_DIR "include")
 
+# Generate compile_commands.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 ##########################################################################
 # DO NOT EDIT BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!!       #
 ##########################################################################

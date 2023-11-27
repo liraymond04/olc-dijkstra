@@ -19,6 +19,10 @@ public:
 		sAppName = "Dijkstra's Shortest Path";
 	}
 
+	~Game() {
+		delete sprMouse;
+	}
+
 private:
 	/* Nodes and Edges */
 	unordered_map<int, Node> vecNodes;
