@@ -71,5 +71,5 @@ Build by passing in a new target flag to the build script
 You can run the application by opening a local web server with emrun
 
 ```bash
-emrun build/olc-rts.html
+emrun build/olc-dijkstra.html
 ```
